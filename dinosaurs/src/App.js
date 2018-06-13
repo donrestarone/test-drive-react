@@ -4,8 +4,10 @@ import Author from './Author.js';
 
 
 class Post extends Component {
+  // props come from index.js
   constructor(props) {
     super()
+    // state comes from index.js line 19
     this.state = {
       body: props.body
     }
@@ -15,6 +17,7 @@ class Post extends Component {
     // get the new body from a user
     // mutate the default body
     let newBody = prompt("what should the new body be?")
+    // set state updates the component's state
     this.setState({
       body: newBody
     })
