@@ -1,8 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
+// import Hello component class from App.js
+import Hello from './App';
 import registerServiceWorker from './registerServiceWorker';
 
-ReactDOM.render(<App />, document.getElementById('root'));
+// render Hello dom-node to the ReactDOM. This takes 2 arguments, 1. the name of the component, 2. where the component gets appended to. here hello is being appended to the root div in index.html
+ReactDOM.render(<Hello />, document.getElementById('root'));
 registerServiceWorker();
