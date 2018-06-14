@@ -13,7 +13,7 @@ class App extends Component {
         <p className="App-intro">
           To get started, edit <code>src/App.js</code> and save to reload.
         </p>
-        <Movie></Movie>
+        <Movie title="The Fellowship of the Ring" hours="2" minutes="58"></Movie>
       </div>
     );
   }
