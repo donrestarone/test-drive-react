@@ -6,7 +6,7 @@ class Movie extends Component {
             <div>
                 <h1>{this.props.title}</h1>
                 <p>Run Time: {this.props.hours} hours and {this.props.minutes} minutes</p>
-                <p>4h 37min</p>
+
             </div>
         )
     }
