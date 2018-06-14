@@ -34,8 +34,13 @@ class Post extends Component {
       <Author author={this.props.authors[0]}/>,
       <Author author={this.props.authors[1]}/>,
     ]
-
+    let allComments = [
+      <Comment body={this.props.comments[0]}/>,   
+      <Comment body={this.props.comments[1]}/>,   
+      <Comment body={this.props.comments[2]}/>   
+    ]
     return (
+
       <div className="App">
           <h1 className="App-title">{this.props.title}</h1>
           {authors}
@@ -45,9 +50,7 @@ class Post extends Component {
             <input type="text" onChange={(e) => this.userInputFieldHandler(e)}/>
           </div>
           <h3>Comments</h3>
-          <Comment body={this.props.comments[0]}/>
-          <Comment body={this.props.comments[1]}/>
-          <Comment body={this.props.comments[2]}/>
+          {allComments}
       </div>
     );
   }
