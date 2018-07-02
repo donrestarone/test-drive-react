@@ -4,8 +4,19 @@ import './App.css';
 import ListItem from './ListItem';
 
 class MyList extends Component {
+  constructor(props) {
+    super()
+    this.state = {
+      toDoItemArray: props.theList
+    }
+  }
+  clearList(e) {
+    this.setState({
+      toDoItemArray: []
+    })
+  }
   render() {
-    let toDoItems = this.props.theList.map((item, index) => (
+    let toDoItems = this.state.toDoItemArray.map((item, index) => (
       <ListItem doThis={item} key={index} /> 
     ))
     return (
@@ -14,6 +25,7 @@ class MyList extends Component {
         <ul>
           {toDoItems}
         </ul>
+        <button onClick={(e) => this.clearList(e)}>Finished the list!</button>
       </ div> 
     );
   }
