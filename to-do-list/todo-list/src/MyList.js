@@ -5,11 +5,14 @@ import ListItem from './ListItem';
 
 class MyList extends Component {
   render() {
+    let toDoItems = this.props.theList.map((item, index) => (
+      <ListItem doThis={item} key={index} /> 
+    ))
     return (
       <div>
         <h1> Things I should do:</h1>
         <ul>
-          <ListItem></ListItem> 
+          {toDoItems}
         </ul>
       </ div> 
     );
